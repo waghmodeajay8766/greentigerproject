@@ -1,0 +1,20 @@
+.active{
+    background-color: orange;
+    border-bottom: 1px solid orange;
+    color: white;
+}
+.mat-sidenav {
+    width: auto;
+    height: 650px;
+   
+    /* border: 1px solid #555; */
+    /* color: green; */
+  }
+  .mat-sidenav
+{
+    background-color:whitesmoke;
+    /* color: green; */
+} 
+.nav-item{
+    color: green;
+}
