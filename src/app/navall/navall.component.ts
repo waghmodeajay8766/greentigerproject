@@ -6,6 +6,9 @@ import { GreenserviceService } from '../greenservice.service';
 
 import Swal from 'sweetalert2';
  import 'sweetalert2/src/sweetalert2.scss'
+import { MatDialog } from '@angular/material/dialog';
+import { NavonlineComponent } from '../navonline/navonline.component';
+import { DilogComponent } from '../dilog/dilog.component';
 @Component({
   selector: 'app-navall',
   templateUrl: './navall.component.html',
@@ -13,10 +16,22 @@ import Swal from 'sweetalert2';
 })
 export class NavallComponent implements OnInit {
  
-  constructor( private fb: FormBuilder, private http: HttpClient) { }
+  constructor( private fb: FormBuilder, private http: HttpClient,public dialog : MatDialog) { }
   isSubmitted: boolean = false;
 
   public myForm:any;
+  openDilog(): void {
+    const dialogRef = this.dialog.open(DilogComponent, {
+      
+      
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      
+    });
+  }
+
   ngOnInit(): void {
 
     this.myForm = this.fb.group({
@@ -82,9 +97,8 @@ export class NavallComponent implements OnInit {
         text: "Data Submitted Successfully",
         icon: "success",
         confirmButtonText: 'Okay',
-        
       })
-      this.myForm.close();
+      this.myForm.closed();
     } else {
       Swal.fire({
         title: "Sorry... ",
@@ -93,9 +107,7 @@ export class NavallComponent implements OnInit {
         confirmButtonText: 'Okay'
       })
     }
-    if(this.myForm.invalid){
-      return;
-    }
+    
   }
   get f() {
     return this.myForm.controls;

@@ -30,6 +30,12 @@ import { DripmarketingComponent } from './dripmarketing/dripmarketing.component'
 import { ReportComponent } from './report/report.component';
 import { SettingComponent } from './setting/setting.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DilogComponent } from './dilog/dilog.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +58,8 @@ import { MatIconModule } from '@angular/material/icon';
     MarketingComponent,
     DripmarketingComponent,
     ReportComponent,
-    SettingComponent
+    SettingComponent,
+    DilogComponent
   ],
   imports: [
     BrowserModule,
@@ -63,8 +70,13 @@ import { MatIconModule } from '@angular/material/icon';
     ReactiveFormsModule,
     ButtonModule,
     MatSidenavModule,
-    MatIconModule
-    
+    MatIconModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule
     
   ],
   providers: [],
