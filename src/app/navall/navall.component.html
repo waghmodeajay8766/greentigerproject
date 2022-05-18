@@ -189,29 +189,29 @@
                 <div class="formgroup mb-2">
                   <label for="">Name</label>
                   <input type="text" class="form-control" formControlName="fname" required
-                    [ngClass]="{'is-invalid': isSubmitted && f.fname.errors}" placeholder="First Name is required">
-                  <div *ngIf="isSubmitted && f.fname.errors?.required" class="invalid-feedback">First Name is required
+                    [ngClass]="{'is-invalid': isSubmitted && formControl.fname.errors}" placeholder="First Name is required">
+                  <div *ngIf="isSubmitted && formControl.fname.errors?.required" class="invalid-feedback">First Name is required
                   </div>
-                  <p class="text-danger" *ngIf="f.fname.invalid && f.fname.errors?.pattern">please enter correct name
+                  <p class="text-danger" *ngIf="formControl.fname.invalid && formControl.fname.errors?.pattern">please enter correct name
                   </p>
                 </div>
                 <div class="formgroup mb-2">
                   <label for="">Email</label>
                   <input type="text" class="form-control" formControlName="email" required
-                    [ngClass]="{'is-invalid': isSubmitted && f.email.errors}" placeholder="Email is required">
-                  <div *ngIf="isSubmitted && f.email.errors?.required" class="invalid-feedback">Email is required</div>
-                  <div *ngIf="isSubmitted && f.email.errors?.pattern" class="invalid-feedback">Please Enter valid email.
+                    [ngClass]="{'is-invalid': isSubmitted && formControl.email.errors}" placeholder="Email is required">
+                  <div *ngIf="isSubmitted && formControl.email.errors?.required" class="invalid-feedback">Email is required</div>
+                  <div *ngIf="isSubmitted && formControl.email.errors?.pattern" class="invalid-feedback">Please Enter valid email.
                   </div>
                 </div>
                 <div class="formgroup mb-2">
                   <label for="">Enquiry Type</label>
                   <div class="form-group">
                     <select id="" class="form-select" formControlName="enqtype" reqired
-                      [ngClass]="{'is-invalid': isSubmitted && f.enqtype.errors}">
+                      [ngClass]="{'is-invalid': isSubmitted && formControl.enqtype.errors}">
                       <option selected>Select Enquiry type</option>
                       <option>Value-1</option>
                     </select>
-                    <div *ngIf="isSubmitted && f.enqtype.errors?.required" class="invalid-feedback">Enqiry Type is
+                    <div *ngIf="isSubmitted && formControl.enqtype.errors?.required" class="invalid-feedback">Enqiry Type is
                       required
                     </div>
                   </div>
@@ -220,11 +220,11 @@
                   <label for="">Center</label>
                   <div class="form-group">
                     <select id="" class="form-select" formControlName="center" reqired
-                      [ngClass]="{'is-invalid': isSubmitted && f.center.errors}">
+                      [ngClass]="{'is-invalid': isSubmitted && formControl.center.errors}">
                       <option selected>Select center</option>
                       <option>Value-1</option>
                     </select>
-                    <div *ngIf="isSubmitted && f.center.errors?.required" class="invalid-feedback">Center is required
+                    <div *ngIf="isSubmitted && formControl.center.errors?.required" class="invalid-feedback">Center is required
                     </div>
                   </div>
                 </div>
@@ -233,30 +233,30 @@
                 <div class="formgroup mb-2">
                   <label for="">Last Name</label>
                   <input type="text" class="form-control" formControlName="lname" required
-                    [ngClass]="{'is-invalid': isSubmitted && f.lname.errors}" placeholder="Last Name is required">
-                  <div *ngIf="isSubmitted && f.lname.errors?.required" class="invalid-feedback">Last Name is required
+                    [ngClass]="{'is-invalid': isSubmitted && formControl.lname.errors}" placeholder="Last Name is required">
+                  <div *ngIf="isSubmitted && formControl.lname.errors?.required" class="invalid-feedback">Last Name is required
                   </div>
-                  <p class="text-danger" *ngIf="f.lname.invalid && f.lname.errors?.pattern">please enter correct Last
+                  <p class="text-danger" *ngIf="formControl.lname.invalid && formControl.lname.errors?.pattern">please enter correct Last
                     name</p>
                 </div>
                 <div class="formgroup mb-2">
                   <label for="">Mobile</label>
                   <input type="text" class="form-control" formControlName="mobaile" required
-                    [ngClass]="{'is-invalid': isSubmitted && f.mobaile.errors}" placeholder="Mobile is required">
-                  <div *ngIf="isSubmitted && f.mobaile.errors?.required" class="invalid-feedback">Mobile is required
+                    [ngClass]="{'is-invalid': isSubmitted && formControl.mobaile.errors}" placeholder="Mobile is required">
+                  <div *ngIf="isSubmitted && formControl.mobaile.errors?.required" class="invalid-feedback">Mobile is required
                   </div>
-                  <p class="text-danger" *ngIf="f.mobaile.invalid && f.lname.errors?.pattern">please enter valid mobile
+                  <p class="text-danger" *ngIf="formControl.mobaile.invalid && formControl.lname.errors?.pattern">please enter valid mobile
                     number</p>
                 </div>
                 <div class="formgroup mb-2">
                   <label for="">Enquiry source</label>
                   <div class="form-group">
                     <select id="" class="form-select" formControlName="enqsource" reqired
-                      [ngClass]="{'is-invalid': isSubmitted && f.enqsource.errors}">
+                      [ngClass]="{'is-invalid': isSubmitted && formControl.enqsource.errors}">
                       <option selected>Select Enquiry source</option>
                       <option>Value-1</option>
                     </select>
-                    <div *ngIf="isSubmitted && f.enqsource.errors?.required" class="invalid-feedback">Enquiry source is
+                    <div *ngIf="isSubmitted && formControl.enqsource.errors?.required" class="invalid-feedback">Enquiry source is
                       required
                     </div>
                   </div>
@@ -265,11 +265,11 @@
                   <label for="">Course</label>
                   <div class="form-group">
                     <select id="" class="form-select" formControlName="course" reqired
-                      [ngClass]="{'is-invalid': isSubmitted && f.course.errors}">
+                      [ngClass]="{'is-invalid': isSubmitted && formControl.course.errors}">
                       <option selected>Select course</option>
                       <option>Value-1</option>
                     </select>
-                    <div *ngIf="isSubmitted && f.course.errors?.required" class="invalid-feedback">course is required
+                    <div *ngIf="isSubmitted && formControl.course.errors?.required" class="invalid-feedback">course is required
                     </div>
                   </div>
                 </div>
@@ -277,8 +277,8 @@
               <div class="formgroup mb-2">
                 <label for="">Remarks</label>
                 <input type="text" class="form-control" formControlName="remark" required
-                  [ngClass]="{'is-invalid': isSubmitted && f.remark.errors}" placeholder="Remarks is required">
-                <div *ngIf="isSubmitted && f.remark.errors?.required" class="invalid-feedback">Remarks is required</div>
+                  [ngClass]="{'is-invalid': isSubmitted && formControl.remark.errors}" placeholder="Remarks is required">
+                <div *ngIf="isSubmitted && formControl.remark.errors?.required" class="invalid-feedback">Remarks is required</div>
               </div>
             </div>
             <div class="formgroup mb-2 d-flex py-2">
